@@ -1,11 +1,11 @@
 const moment = require('moment-timezone');
 const kleur = require('kleur');
 
-const getTime = () => moment().tz('Asia/Manila').format('HH:mm:ss');
+const getTime = () => moment().tz('Africa/Lagos').format('HH:mm:ss');
 
 // Create logger with bold + color
 const createLogger = (colorFn, prefix = '') => 
-    (text) => console.log(kleur.bold(colorFn(`[${getTime()}] [ Ajiro ]${prefix} » ${text}`)));
+    (text) => console.log(kleur.bold(colorFn(`[${getTime()}] ${prefix} » ${text}`)));
 
 // Create plain logger without timestamp and prefix
 const createPlainLogger = (colorFn) => 
@@ -13,11 +13,11 @@ const createPlainLogger = (colorFn) =>
 
 // Create error logger with [ Error ] prefix
 const createErrorLogger = (colorFn) => 
-    (text) => console.log(kleur.bold(colorFn(`[${getTime()}] [ Ajiro ] [ Error ] » ${text}`)));
+    (text) => console.log(kleur.bold(colorFn(`[${getTime()}] [ Error ] » ${text}`)));
 
 // Create warn logger with [ Warn ] prefix
 const createWarnLogger = (colorFn) => 
-    (text) => console.log(kleur.bold(colorFn(`[${getTime()}] [ Ajiro ] [ Warn ] » ${text}`)));
+    (text) => console.log(kleur.bold(colorFn(`[${getTime()}] [ Warn ] » ${text}`)));
 
 // Set up the loggers using both bold and color
 const log = {
