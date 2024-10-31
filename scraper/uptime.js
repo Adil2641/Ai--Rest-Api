@@ -8,7 +8,7 @@ exports.config = {
     author: 'Lance Cochangco',
     description: 'Get uptime canvas',
     category: 'canvas',
-    link: ['/uptime?instag=lance.cochangco&ghub=ajirodesu&fb=Lance%20Cochangco&hours=1&minutes=23&seconds=45&botname=Wataru']
+    link: ['/uptime?instag=gerald.n&ghub=Mateo-Chatbot&fb=Gerald%20Max&hours=1&minutes=23&seconds=45&botname=Mateo']
 };
 
 exports.initialize = async function ({ req, res }) {
